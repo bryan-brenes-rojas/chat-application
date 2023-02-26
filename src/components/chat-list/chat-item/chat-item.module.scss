@@ -1,0 +1,61 @@
+@import "../../../styles/main.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  margin-inline: 1em;
+  border-radius: 1em;
+  cursor: pointer;
+
+  &.active {
+    color: #fff !important;
+    background-color: $accentBlue;
+  }
+
+  .subTitle {
+    font-size: 0.8rem;
+    color: $fontLightGrey;
+    &.active {
+      color: #fff;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .headerText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.2rem;
+      margin-left: 0.6rem;
+
+      .title {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.4rem;
+
+    .unreadBadge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      width: 1.4rem;
+      height: 1.4rem;
+      font-weight: bold;
+      font-size: 0.8rem;
+      background-color: $accentRed;
+      border-radius: 100%;
+    }
+  }
+}

@@ -1,10 +1,16 @@
-@import '../../styles/main.scss';
-
-$listWidth: 450px;
+@import "../../styles/main.scss";
 
 .container {
-  max-width: $listWidth;
-  width: $listWidth;
+  max-width: $minWidth;
+  min-width: $minWidth;
+  width: $minWidth;
   height: 100%;
   border-right: 1px solid $lightBorder;
+  display: flex;
+  flex-direction: column;
+
+  .list {
+    overflow: auto;
+    flex: 1;
+  }
 }

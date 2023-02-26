@@ -1,3 +1,8 @@
+@import '../../styles/main.scss';
+
 .container {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: $minWidth;
 }

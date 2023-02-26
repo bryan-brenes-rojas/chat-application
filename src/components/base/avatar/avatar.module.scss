@@ -2,10 +2,16 @@
 
 .avatar {
   width: 3rem;
+  min-width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+
+  &.large {
+    width: 4rem;
+    min-width: 4rem;
+  }
 
   &.online::after {
     content: "";
