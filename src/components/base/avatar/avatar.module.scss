@@ -1,0 +1,26 @@
+@import "../../../styles/main.scss";
+
+.avatar {
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &.online::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: $accentGreen;
+    border-radius: 100%;
+    border: 2px solid white;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 100%;
+  }
+}
