@@ -6,6 +6,7 @@ type Props = {
   subTitle: string;
   avatarSrc: string;
   online?: boolean;
+  swapTitles?: boolean;
   children?: React.ReactNode;
 };
 
@@ -14,7 +15,11 @@ export default function Header(props: Props) {
     <div className={classes.container}>
       <div className={classes.left}>
         <Avatar src={props.avatarSrc} online={props.online} />
-        <div className={classes.headerText}>
+        <div
+          className={`${classes.headerText} ${
+            props.swapTitles ? classes.reverse : ""
+          }`}
+        >
           <span className={classes.subTitle}>{props.subTitle}</span>
           <h1 className={classes.title}>{props.title}</h1>
         </div>
